@@ -63,6 +63,8 @@ void resize_array(Array *arr) {
   // Create a new element storage with double capacity
   int capacity = 2 * arr->capacity;
 
+  Array *new_array = create_array(capacity);
+
   // Copy elements into the new storage
 
   // Free the old elements array (but NOT the strings they point to)
