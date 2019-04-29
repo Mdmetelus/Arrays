@@ -106,6 +106,8 @@ char *arr_read(Array *arr, int index) {
   {
 
     // Otherwise, return the element at the given index
+    return (arr->elements[index]);
+  }
 }
 
 
