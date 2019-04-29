@@ -76,7 +76,7 @@ void resize_array(Array *arr) {
 
   // Update the elements and capacity to new values
   arr->elements = new_array->elements;
-  
+
   arr->capacity = new_array->capacity;
 }
 
@@ -96,8 +96,16 @@ void resize_array(Array *arr) {
 char *arr_read(Array *arr, int index) {
 
   // Throw an error if the index is greater or equal to than the current count
+  if (index > arr->count)
+  {
+    printf("ERROR! index is greater than the current count");
 
-  // Otherwise, return the element at the given index
+    exit(1);
+  }
+  else
+  {
+
+    // Otherwise, return the element at the given index
 }
 
 
