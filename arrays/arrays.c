@@ -42,7 +42,7 @@ void destroy_array(Array *arr) {
     arr->elements[i] = NULL;
 
     free(arr->elements[i]);
-    
+
     }
 
   // Free all elements
@@ -61,6 +61,7 @@ void destroy_array(Array *arr) {
 void resize_array(Array *arr) {
 
   // Create a new element storage with double capacity
+  int capacity = 2 * arr->capacity;
 
   // Copy elements into the new storage
 
