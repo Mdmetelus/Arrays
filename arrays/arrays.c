@@ -28,7 +28,7 @@ Array *create_array (int capacity) {
   arr->count = 0;
   // Allocate memory for elements
   arr->elements = calloc(capacity, sizeof(char *));
-  
+
   return arr;
 }
 
@@ -37,6 +37,10 @@ Array *create_array (int capacity) {
  * Free memory for an array and all of its stored elements
  *****/
 void destroy_array(Array *arr) {
+  for (int i = 0; i < arr->count; i++)
+  {
+   
+  }
 
   // Free all elements
 
