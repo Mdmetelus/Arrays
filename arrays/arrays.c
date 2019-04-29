@@ -66,8 +66,13 @@ void resize_array(Array *arr) {
   Array *new_array = create_array(capacity);
 
   // Copy elements into the new storage
+  for (int i = 0; i < arr->count; i++)
+  {
+    new_array->elements[i] = arr->elements[i];
+  }
 
   // Free the old elements array (but NOT the strings they point to)
+  free(arr->elements);
 
   // Update the elements and capacity to new values
 
