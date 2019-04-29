@@ -75,7 +75,9 @@ void resize_array(Array *arr) {
   free(arr->elements);
 
   // Update the elements and capacity to new values
-
+  arr->elements = new_array->elements;
+  
+  arr->capacity = new_array->capacity;
 }
 
 
