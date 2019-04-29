@@ -45,7 +45,8 @@ void destroy_array(Array *arr) {
   // Free all elements
 
   // Free array
-
+  
+  free(arr);
 }
 
 /*****
