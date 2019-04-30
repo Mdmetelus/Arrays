@@ -176,7 +176,16 @@ void arr_remove(Array *arr, char *element) {
   int pos = 0;
   for (int i = 0; i < arr->count; i++)
   {
-    
+    if (arr->elements[i] == element)
+    {
+
+      pos = i;
+
+      arr->elements[i] = NULL;
+
+      free(arr->elements[i]);
+      
+    }
   }
 
   // Shift over every element after the removed element to the left one position
