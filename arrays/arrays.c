@@ -117,8 +117,17 @@ char *arr_read(Array *arr, int index) {
 void arr_insert(Array *arr, char *element, int index) {
 
   // Throw an error if the index is greater than the current count
+  if (index > arr->count)
+  {
+    printf("ERROR! index is greater than the current count");
+    exit(1);
+  }
 
   // Resize the array if the number of elements is over capacity
+  if (arr->count + 1 > arr->capacity)
+  {
+    resize_array(arr);
+  }
 
   // Move every element after the insert index to the right one position
 
