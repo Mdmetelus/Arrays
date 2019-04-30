@@ -137,13 +137,16 @@ void arr_append(Array *arr, char *element) {
   // or throw an error if resize isn't implemented yet.
   if (!(arr->count < arr->capacity))
   {
-    
+
+    resize_array(arr);
+    return;
   }
 
   // Copy the element and add it to the end of the array
+  arr->elements[arr->count] = element;
 
   // Increment count by 1
-
+  arr->count++;
 }
 
 /*****
